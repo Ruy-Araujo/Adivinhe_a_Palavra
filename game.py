@@ -27,21 +27,16 @@ valido = False
 
 # loop principal
 while not valido:
-    print(pl.palavra)
     print(pl.imprime())
-    escolha = input('Digite sair,dica ou uma letra: ')
+    escolha = input('Digite dica ou uma letra: ')
 
     if escolha in pl.palavra:
         pl.mostraLetra(escolha)
     elif escolha == 'dica':
         print(f'Essa plavra possui algum {pl.dica()}')
         delay(3)
-    elif escolha == 'sair':
-        print(f'Já vai? Que pena a palavra escondida era "{pl.palavra}"')
-        delay(5)
-        sair()
     else:
-        print(f'Que pena parece que não há nenhuma "{escolha}" nessa palavra')
+        print(f'Que pena parece que não há nenhum "{escolha}" nessa palavra')
         delay(5)
     if not '_' in pl.palavraOculta:
         valido = True
